@@ -3,10 +3,10 @@ var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 
 var ArticleScrape = new Schema({
-    headline: {
+    title: {
         type: String
     },
-    summary: {
+    content: {
         type: String
     },
     link: {
@@ -16,7 +16,7 @@ var ArticleScrape = new Schema({
         type: Boolean,
         default: false
     },
-    notes: [{
+    comment: [{
         type: Schema.Types.ObjectId,
         ref: "Comment"
     }]
